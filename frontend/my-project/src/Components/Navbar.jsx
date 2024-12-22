@@ -12,7 +12,7 @@ const Navbar = () => {
     <nav className="relative flex justify-between items-center px-8 pt-6">
       {/* Logo */}
       <Link to="/">
-        <div className="text-xl font-bold">Parva Shah</div>
+        <div className="text-xl  font-bold">Parva Shah</div>
       </Link>
 
       {/* Hamburger Icon */}
