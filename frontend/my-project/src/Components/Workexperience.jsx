@@ -4,7 +4,7 @@ const Workexperience = () => {
   
     const experiences = [
         {
-          title: "Web Developer",
+          title: "Software Developer",
           year: "April 2024 - Present",
           company:'Comono India',
           description:

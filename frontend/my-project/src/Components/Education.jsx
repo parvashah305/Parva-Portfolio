@@ -18,7 +18,7 @@ const Education = () => {
             school:"PES UNIVERSITY",
             class:"B-TECH CSE",
             year:"2023-2027",
-            cgpa:"8.41 CGPA"  
+            cgpa:"8.38 CGPA (Till 3rd Sem)"  
           }
         
       ];
