@@ -2,16 +2,21 @@ import React from 'react'
 
 const Workexperience = () => {
   
-    const experiences = [
-        {
-          title: "Software Developer",
-          year: "April 2024 - Present",
-          company:'Comono India',
-          description:
-            "I developed the official website for Comono India using HTML, CSS, and JavaScript. The website is fully responsive, ensuring an optimal viewing experience across all devices. It features a clean and modern design with seamless navigation and user-friendly functionality. The project showcases my ability to create engaging and professional web pages while adhering to industry standards. The website is live and can be accessed at comono.in.",
-        }
-        
-      ];
+  const experiences = [
+    {
+      title: "Software Developer",
+      year: "April 2024 - Present",
+      company: "Comono India",
+      description: (
+        <>
+          I developed the official website for Comono India using HTML, CSS, and JavaScript. The website is fully responsive, ensuring an optimal viewing experience across all devices. It features a clean and modern design with seamless navigation and user-friendly functionality. The project showcases my ability to create engaging and professional web pages while adhering to industry standards. The website is live and can be accessed at{" "}
+          <a href="https://comono.in" className="text-blue-600 underline">
+            comono.in
+          </a>.
+        </>
+      ),
+    }
+  ];
     
       return (
         <div className=" p-8">
