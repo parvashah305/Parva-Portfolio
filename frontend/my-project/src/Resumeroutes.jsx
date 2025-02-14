@@ -10,7 +10,7 @@ const Resumeroutes = () => {
     <>
         
         <Navbar/>
-        <div className='mt-20 text-4xl font-bold text-center'>
+        <div className='mt-20 text-4xl font-bold text-center text-black'>
             Resume
         </div>
         <Workexperience/>

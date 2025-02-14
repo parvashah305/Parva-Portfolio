@@ -1,5 +1,6 @@
 import React from "react";
 import Parva from "../images/Parva.jpeg";
+import parva from "../images/parva.jpg";
 import { Link } from "react-router-dom";
 
 const About = () => {
@@ -10,9 +11,9 @@ const About = () => {
         <div className="md:w-1/2 flex justify-center mb-8 md:mb-0">
           <div className="rounded-full overflow-hidden md:h-[300px] md:w-[300px] lg:h-[400px] lg:w-[400px] h-48 w-48 border-4 border-gray-200 shadow-lg">
             <img
-              src={Parva}
+              src={parva}
               alt="Profile"
-              className="object-cover w-full h-full"
+              className="object-[25%_20%] object-cover w-full h-full"
             />
           </div>
         </div>
