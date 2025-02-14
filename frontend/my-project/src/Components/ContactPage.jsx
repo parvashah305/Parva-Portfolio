@@ -36,7 +36,7 @@ const ContactPage = () => {
     const formErrors = validateForm();
     if (Object.keys(formErrors).length === 0) {
       try {
-        const response = await axios.post("http://localhost:4000/contact", formData);
+        const response = await axios.post("https://parva-portfolio-backend.vercel.app/contact", formData);
         console.log("Response from backend:", response.data);
         setFormData({
           firstName: "",
