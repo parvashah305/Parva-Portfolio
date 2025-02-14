@@ -46,7 +46,7 @@ const Projects = () => {
       
   return (
     <div className=" mt-12 py-10 ">
-    <div className="max-w-6xl mx-auto">
+    <div className="max-w-6xl mx-auto text-black">
       <h1 className="text-3xl font-bold text-center mb-20">My Projects</h1>
       <div className="space-y-20">
         {projects.map((project, index) => (

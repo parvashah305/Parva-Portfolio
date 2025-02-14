@@ -59,7 +59,7 @@ const ContactPage = () => {
   return (
     <div className="flex flex-col md:flex-row items-center justify-center min-h-screen px-4 md:px-20 py-10">
       {/* Contact Info */}
-      <div className="md:w-1/2 mb-8 md:mb-0 text-center md:text-left">
+      <div className="md:w-1/2 mb-8 md:mb-0 text-center md:text-left text-black">
         <h1 className="text-3xl md:text-4xl font-bold mb-4">Your Ideas, My Skills</h1>
         <p className="mb-6 text-gray-600">Looking forward to hearing from you</p>
         <p className="mb-2"><strong>Phone:</strong> +91 9638724826</p>

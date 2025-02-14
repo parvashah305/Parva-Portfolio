@@ -25,7 +25,7 @@ const Education = () => {
     
       return (
         <div className=" p-8">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-4xl mx-auto text-black">
             <h1 className="text-4xl font-bold mb-8">Education</h1>
             {education.map((edu, index) => (
               <div

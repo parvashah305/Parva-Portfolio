@@ -19,7 +19,7 @@ const About = () => {
 
         {/* About Text Section */}
         <div className="md:w-1/2 text-center md:text-left px-4 lg:px-8">
-          <h1 className="text-4xl lg:text-5xl font-bold mb-4">Hello,</h1>
+          <h1 className="text-4xl text-black lg:text-5xl font-bold mb-4">Hello,</h1>
           <p className="text-gray-600 text-sm md:text-base lg:text-lg mb-6 leading-relaxed">
             A Bit About Me <br />
             <br />

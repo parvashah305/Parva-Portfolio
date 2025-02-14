@@ -20,7 +20,7 @@ const Workexperience = () => {
     
       return (
         <div className=" p-8">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-4xl mx-auto text-black">
             <h1 className="text-4xl font-bold mb-8">Work Experience</h1>
             {experiences.map((exp, index) => (
               <div

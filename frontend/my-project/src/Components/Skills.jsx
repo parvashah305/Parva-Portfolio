@@ -19,7 +19,7 @@ const Skills = () => {
       ];
   return (
     <div className=" py-10">
-      <div className="max-w-6xl mx-auto text-center">
+      <div className="max-w-6xl mx-auto text-center text-black">
       <h1 className="text-4xl font-bold mb-8">Skills & Expertises</h1>
         <h1 className="text-3xl font-bold mb-8">I have experience with these technologies</h1>
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
