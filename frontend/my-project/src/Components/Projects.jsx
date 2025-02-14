@@ -58,7 +58,9 @@ const Projects = () => {
           >
            
             <div className="lg:w-1/2 px-4 lg:px-8">
-              <h2 className="text-2xl font-bold mb-4">{project.name}</h2>
+              <a href={project.link}>
+                <h2 className="text-2xl font-bold mb-4 text-blue-600 underline hover:text-blue-700">{project.name}</h2>
+              </a>
               <p className="text-gray-600 text-sm">{project.description}</p>
             </div>
            
