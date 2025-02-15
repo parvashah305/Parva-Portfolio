@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { FaSpinner } from "react-icons/fa"; // Import spinner icon
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -13,6 +14,7 @@ const ContactPage = () => {
   });
 
   const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -35,6 +37,7 @@ const ContactPage = () => {
     e.preventDefault();
     const formErrors = validateForm();
     if (Object.keys(formErrors).length === 0) {
+      setLoading(true); // Show loader
       try {
         const response = await axios.post("https://parva-portfolio-backend.vercel.app/contact", formData);
         console.log("Response from backend:", response.data);
@@ -50,6 +53,8 @@ const ContactPage = () => {
       } catch (error) {
         console.error("Error submitting form:", error);
         toast.error("Failed to submit the form. Please try again.");
+      } finally {
+        setLoading(false); 
       }
     } else {
       setErrors(formErrors);
@@ -58,29 +63,27 @@ const ContactPage = () => {
 
   return (
     <div className="flex flex-col md:flex-row items-center justify-center min-h-screen px-4 md:px-20 py-10">
-      {/* Contact Info */}
       <div className="md:w-1/2 mb-8 md:mb-0 text-center md:text-left text-black">
         <h1 className="text-3xl md:text-4xl font-bold mb-4">Your Ideas, My Skills</h1>
         <p className="mb-6 text-gray-600">Looking forward to hearing from you</p>
         <p className="mb-2"><strong>Phone:</strong> +91 9638724826</p>
         <p><strong>Email:</strong> parvashah305@gmail.com</p>
         <div className="flex justify-center md:justify-start space-x-4 mt-6">
-            <a href="https://www.linkedin.com/in/parvashah305/" target='_blank' className="hover:text-gray-900 text-gray-700">
+          <a href="https://www.linkedin.com/in/parvashah305/" target='_blank' className="hover:text-gray-900 text-gray-700">
             <i className="ri-linkedin-fill text-4xl"></i>
-            </a>
-            <a href="https://github.com/parvashah305?tab=repositories" target='_blank' className="hover:text-gray-900 text-gray-700">
+          </a>
+          <a href="https://github.com/parvashah305?tab=repositories" target='_blank' className="hover:text-gray-900 text-gray-700">
             <i className="ri-github-fill text-4xl"></i>
-            </a>
-            <a href="https://www.instagram.com/parvashah/" target='_blank' className="hover:text-gray-900 text-gray-700">
+          </a>
+          <a href="https://www.instagram.com/parvashah/" target='_blank' className="hover:text-gray-900 text-gray-700">
             <i className="ri-instagram-fill text-4xl"></i>
-            </a>
-            <a href="https://wa.me/919638724826" target="_blank" className="hover:text-gray-900 text-gray-700">
-            <i class="ri-whatsapp-line text-4xl"></i>
-            </a>
-          </div>
+          </a>
+          <a href="https://wa.me/919638724826" target="_blank" className="hover:text-gray-900 text-gray-700">
+            <i className="ri-whatsapp-line text-4xl"></i>
+          </a>
+        </div>
       </div>
 
-      {/* Contact Form */}
       <div className="md:w-1/2 p-6 md:p-8 rounded-md">
         <form onSubmit={handleSubmit}>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -142,8 +145,12 @@ const ContactPage = () => {
             />
           </div>
 
-          <button type="submit" className="mt-6 w-full bg-yellow-500 text-white font-bold py-2 px-4 rounded-md hover:bg-yellow-600">
-            Submit
+          {/* Submit Button with Loader */}
+          <button type="submit" 
+            className="mt-6 w-full bg-yellow-500 text-white font-bold py-2 px-4 rounded-md hover:bg-yellow-600 flex justify-center items-center"
+            disabled={loading} 
+          >
+            {loading ? <FaSpinner className="animate-spin text-xl mr-2" /> : "Submit"}
           </button>
         </form>
       </div>
@@ -154,4 +161,3 @@ const ContactPage = () => {
 };
 
 export default ContactPage;
-
