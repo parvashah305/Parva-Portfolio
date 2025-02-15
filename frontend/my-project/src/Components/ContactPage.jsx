@@ -64,6 +64,20 @@ const ContactPage = () => {
         <p className="mb-6 text-gray-600">Looking forward to hearing from you</p>
         <p className="mb-2"><strong>Phone:</strong> +91 9638724826</p>
         <p><strong>Email:</strong> parvashah305@gmail.com</p>
+        <div className="flex justify-center md:justify-start space-x-4 mt-6">
+            <a href="https://www.linkedin.com/in/parvashah305/" target='_blank' className="hover:text-gray-900 text-gray-700">
+            <i className="ri-linkedin-fill text-4xl"></i>
+            </a>
+            <a href="https://github.com/parvashah305?tab=repositories" target='_blank' className="hover:text-gray-900 text-gray-700">
+            <i className="ri-github-fill text-4xl"></i>
+            </a>
+            <a href="https://www.instagram.com/parvashah/" target='_blank' className="hover:text-gray-900 text-gray-700">
+            <i className="ri-instagram-fill text-4xl"></i>
+            </a>
+            <a href="https://wa.me/919638724826" target="_blank" className="hover:text-gray-900 text-gray-700">
+            <i class="ri-whatsapp-line text-4xl"></i>
+            </a>
+          </div>
       </div>
 
       {/* Contact Form */}

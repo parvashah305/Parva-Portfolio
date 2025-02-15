@@ -31,6 +31,9 @@ const Footer = () => {
             <a href="https://www.instagram.com/parvashah/" target='_blank' className="hover:text-gray-900">
             <i className="ri-instagram-fill text-2xl"></i>
             </a>
+            <a href="https://wa.me/919638724826" target="_blank" className="hover:text-gray-900 text-gray-700">
+            <i class="ri-whatsapp-line text-2xl"></i>
+            </a>
           </div>
         </div>
         

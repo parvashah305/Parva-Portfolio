@@ -62,7 +62,7 @@ const Projects = () => {
                     href={project.link}
                     className="flex items-center space-x-2"
                   >
-                    <h2 className="text-2xl font-bold text-blue-600 underline hover:text-blue-700">
+                    <h2 className="text-xl font-bold text-blue-600 underline hover:text-blue-700">
                       {project.name}
                     </h2>
                     <i className="ri-link text-xl text-gray-600 hover:text-gray-800"></i>

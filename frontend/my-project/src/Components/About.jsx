@@ -19,7 +19,9 @@ const About = () => {
         </div>
 
         <div className="md:w-1/2 text-center md:text-left px-4 lg:px-8">
-          <h1 className="text-4xl text-black lg:text-5xl font-bold mb-4">Hello,</h1>
+          <h1 className="text-4xl text-black lg:text-5xl font-bold mb-4">
+            Hello,
+          </h1>
           <p className="text-gray-600 text-sm md:text-base lg:text-lg mb-6 leading-relaxed">
             A Bit About Me <br />
             <br />
@@ -48,22 +50,31 @@ const About = () => {
           </p>
 
           <div className="flex flex-wrap justify-center md:justify-start gap-4">
-            <Link to="/resume">
-                <button className="bg-yellow-500 text-black text-lg md:text-xl border-2 border-black font-bold h-14 w-36 rounded-full hover:bg-transparent transition-all duration-300">
-                  Resume
-                </button>
+            {/* <Link to="/resume">
+              <button className="bg-yellow-500 text-black text-lg md:text-xl border-2 border-black font-bold h-14 w-36 rounded-full hover:bg-transparent transition-all duration-300">
+                Resume
+              </button>
             </Link>
             <Link to="/projects">
-                <button className="bg-red-500 text-black text-lg md:text-xl border-2 border-black font-bold h-14 w-36 rounded-full hover:bg-transparent transition-all duration-300">
-                  Projects
-                </button>
+              <button className="bg-red-500 text-black text-lg md:text-xl border-2 border-black font-bold h-14 w-36 rounded-full hover:bg-transparent transition-all duration-300">
+                Projects
+              </button>
             </Link>
             <Link to="/contact">
-                <button className="bg-blue-500 text-black text-lg md:text-xl border-2 border-black font-bold h-14 w-36 rounded-full hover:bg-transparent transition-all duration-300">
-                  Contact
-                </button>
-            </Link>
+              <button className="bg-blue-500 text-black text-lg md:text-xl border-2 border-black font-bold h-14 w-36 rounded-full hover:bg-transparent transition-all duration-300">
+                Contact
+              </button>
+            </Link> */}
+            <a
+              href="/Parva-Final_Resume.pdf"
+              download="Parva Resume.pdf"
+              className="bg-blue-500 text-white px-4 py-2 rounded-lg flex items-center space-x-2 hover:bg-blue-600"
+            >
+              <i className="ri-download-line text-xl"></i>
+              <span>Download CV</span>
+            </a>
           </div>
+          
         </div>
       </section>
     </>
