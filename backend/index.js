@@ -58,6 +58,13 @@ app.post("/contact", async (req, res) => {
 
     await transporter.sendMail(mailOptions);
 
+    await transporter.sendMail({
+      from: process.env.EMAIL_USER,
+      to: email,  
+      subject: "Thank You for Contacting Us!",
+      text: `Hi ${firstName},\n\nWe've received your message and will respond shortly.\n\nBest Regards,\nParva Shah`,
+    });
+
     res.status(200).json({ message: "Form submitted successfully and saved to database!" });
   } catch (error) {
     console.error("Error:", error);
