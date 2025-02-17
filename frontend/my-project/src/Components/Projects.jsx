@@ -76,7 +76,7 @@ const Projects = () => {
                   <img
                     src={project.image}
                     alt={project.name}
-                    className="rounded-lg shadow-md w-full object-cover"
+                    className="rounded-lg shadow-md w-full object-cover hover:scale-110 transition-all duration-500"
                   />
                 </a>
               </div>
