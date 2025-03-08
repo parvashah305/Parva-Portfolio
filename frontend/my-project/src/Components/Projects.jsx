@@ -4,6 +4,7 @@ import Solemakers from "../images/Solemakers.png";
 import Comonoindia from "../images/Comonoindia.png";
 import Livescore from "../images/Livescore.png";
 import lockitdown from "../images/lockitdown.png";
+import Qizzler from "../images/Qizzler.png";
 
 const Projects = () => {
   const projects = [
@@ -13,6 +14,13 @@ const Projects = () => {
         "This is the official website of Comono India, developed by me as a company-level project. The website is fully responsive and user-friendly, offering an optimal experience across all devices. It showcases a professional design and efficient functionality, catering to the company’s needs. The website is live and accessible to users.",
       image: Comonoindia,
       link: "https://comono.in",
+    },
+    {
+      name: "Qizzler",
+      description:
+        "Qizzler is a MERN stack-based online quiz platform that allows users to create, manage, and attempt quizzes. The platform provides an intuitive user experience, enabling users to sign up, log in, and participate in quizzes while tracking their performance. Secure authentication is implemented using JWT tokens, and quiz data is stored in MongoDB.",
+      image: Qizzler,
+      link: "https://qizzler.vercel.app",
     },
     {
       name: "SmartCV",
@@ -59,7 +67,7 @@ const Projects = () => {
               <div className="lg:w-1/2 px-4 lg:px-8">
                 <div className="flex items-center space-x-2">
                   <a
-                    href={project.link}
+                    href={project.link} target="_blank"
                     className="flex items-center space-x-2"
                   >
                     <h2 className="text-xl font-bold text-blue-600 underline hover:text-blue-700">

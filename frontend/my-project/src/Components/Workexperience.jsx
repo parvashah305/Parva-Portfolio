@@ -10,7 +10,7 @@ const Workexperience = () => {
       description: (
         <>
           I developed the official website for Comono India using HTML, CSS, and JavaScript. The website is fully responsive, ensuring an optimal viewing experience across all devices. It features a clean and modern design with seamless navigation and user-friendly functionality. The project showcases my ability to create engaging and professional web pages while adhering to industry standards. The website is live and can be accessed at{" "}
-          <a href="https://comono.in" className="text-blue-600 underline">
+          <a target='_blank' href="https://comono.in" className="text-blue-600 underline">
             comono.in
           </a>.
         </>
