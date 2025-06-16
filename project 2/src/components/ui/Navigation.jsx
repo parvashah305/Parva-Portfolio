@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { HiMenu, HiX } from 'react-icons/hi';
 
 const Navigation = () => {
@@ -44,7 +44,7 @@ const Navigation = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
-    setIsOpen(false);
+    setIsOpen(false); // Ensure menu closes after navigation
   };
 
   return (
@@ -102,30 +102,34 @@ const Navigation = () => {
         </div>
 
         {/* Mobile Navigation */}
-        <motion.div
-          className={`md:hidden ${isOpen ? 'block' : 'hidden'}`}
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: isOpen ? 1 : 0, height: isOpen ? 'auto' : 0 }}
-          transition={{ duration: 0.3 }}
-        >
-          <div className="px-2 pt-2 pb-3 space-y-1 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700">
-            {navItems.map((item) => (
-              <motion.button
-                key={item.name}
-                onClick={() => scrollToSection(item.href)}
-                className={`block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-colors ${
-                  activeSection === item.href.slice(1)
-                    ? 'text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-900/20'
-                    : 'text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-50 dark:hover:bg-gray-800'
-                }`}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                {item.name}
-              </motion.button>
-            ))}
-          </div>
-        </motion.div>
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              key="mobile-menu"
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.3 }}
+              className="md:hidden px-2 pt-2 pb-3 space-y-1 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700"
+            >
+              {navItems.map((item) => (
+                <motion.button
+                  key={item.name}
+                  onClick={() => scrollToSection(item.href)}
+                  className={`block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-colors ${
+                    activeSection === item.href.slice(1)
+                      ? 'text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-900/20'
+                      : 'text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-50 dark:hover:bg-gray-800'
+                  }`}
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  {item.name}
+                </motion.button>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </motion.nav>
     </>
   );
