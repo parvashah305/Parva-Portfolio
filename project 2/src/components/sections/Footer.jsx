@@ -36,13 +36,8 @@ const Footer = () => {
             transition={{ duration: 0.6 }}
             className="flex items-center gap-2 mb-4 md:mb-0"
           >
-            <span className="text-gray-600 dark:text-gray-300">Made with</span>
-            <motion.div
-              animate={{ scale: [1, 1.2, 1] }}
-              transition={{ duration: 1, repeat: Infinity }}
-            >
-              <HiHeart className="w-5 h-5 text-red-500" />
-            </motion.div>
+            <span className="text-gray-600 dark:text-gray-300">Made</span>
+            
             <span className="text-gray-600 dark:text-gray-300">by</span>
             <span className="font-bold text-gradient bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent">
               Parva Shah
