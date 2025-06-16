@@ -1,14 +1,22 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { HiChevronDown, HiCode, HiSparkles } from 'react-icons/hi';
+import { HiChevronDown, HiCode } from 'react-icons/hi';
+import { FaDownload } from 'react-icons/fa';
 
 const Hero = () => {
+  const scrollToProjects = () => {
+    document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
+  };
+
   const scrollToAbout = () => {
     document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
   };
 
-  const scrollToProjects = () => {
-    document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
+  const handleDownloadCV = () => {
+    const link = document.createElement('a');
+    link.href = '/Parva-Final_Resume.pdf';
+    link.download = 'ParvaShah_CV.pdf';
+    link.click();
   };
 
   return (
@@ -36,11 +44,11 @@ const Hero = () => {
             >
               <HiCode className="w-10 h-10 text-white" />
             </motion.div>
-            
+
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               <span className="text-gradient">Parva Shah</span>
             </h1>
-            
+
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -58,17 +66,17 @@ const Hero = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
           >
             <motion.button
-              onClick={scrollToAbout}
+              onClick={handleDownloadCV}
               className="px-8 py-4 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >
               <span className="flex items-center gap-2">
-                Learn About Me
-                <HiSparkles className="w-5 h-5" />
+                Download CV
+                <FaDownload className="w-5 h-5" />
               </span>
             </motion.button>
-            
+
             <motion.button
               onClick={scrollToProjects}
               className="px-8 py-4 bg-transparent border-2 border-primary-500 text-primary-500 rounded-full font-medium hover:bg-primary-500 hover:text-white transition-all duration-300"
