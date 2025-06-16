@@ -16,6 +16,7 @@ const About = () => {
       { name: 'TailwindCSS', icon: SiTailwindcss, color: '#06B6D4' },
       { name: 'Bootstrap', icon: SiBootstrap, color: '#7952B3' },
       { name: 'JavaScript', icon: SiJavascript, color: '#F7DF1E' },
+      { name: 'TypeScript', icon: SiTypescript, color: '#3178C6' },
     ],
     Backend: [
       { name: 'NodeJS', icon: SiNodedotjs, color: '#339933' },
@@ -31,7 +32,7 @@ const About = () => {
       { name: 'GitHub', icon: SiGithub, color: '#181717' },
       { name: 'Python', icon: SiPython, color: '#3776AB' },
       { name: 'C', icon: SiC, color: '#A8B9CC' },
-      { name: 'TypeScript', icon: SiTypescript, color: '#3178C6' },
+      
     ],
   };
 
