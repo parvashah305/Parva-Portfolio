@@ -5,7 +5,7 @@ require("dotenv").config();
 
 const app = express();
 const corsOptions = {
-    origin: "https://parvashah.vercel.app/", 
+    origin: "https://parvashah.vercel.app", 
     methods: "GET,POST",
     credentials: true
   };
