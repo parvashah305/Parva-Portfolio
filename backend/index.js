@@ -49,8 +49,8 @@ app.post("/contact", async (req, res) => {
   }
 });
 
-// module.exports = app;
+module.exports = app;
 
-app.listen(4000,()=>{
-  console.log("Server Started")
-})
+// app.listen(4000,()=>{
+//   console.log("Server Started")
+// })

@@ -26,7 +26,7 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await axios.post('http://localhost:4000/contact', formData);
+      const response = await axios.post('https://parva-portfolio-backend.vercel.app/contact', formData);
       
       toast.success('Message sent successfully!', {
         duration: 5000,
