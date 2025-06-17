@@ -88,13 +88,13 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div variants={itemVariants} className="space-y-6">
               <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                I'm a self-taught programmer and currently a second-year Computer Science student at PES University. 
+                I'm a self-taught programmer and currently a third-year Computer Science student at PES University. 
                 I started my programming journey with Python four years ago, focusing on GUI apps, but soon expanded 
                 into full-stack web development. I now work with technologies like ReactJS, NodeJS, MongoDB, and ExpressJS.
               </p>
               
               <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                Presently, I'm a Full Stack Developer Intern at Comono India. I enjoy building intuitive and user-focused 
+                Presently, I'm a Software Developer Intern at Comono India. I enjoy building intuitive and user-focused 
                 web apps. Outside of coding, I like playing cricket and listening to music. I'm always eager to collaborate 
                 on new ideas and solve meaningful problems.
               </p>
