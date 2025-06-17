@@ -14,7 +14,7 @@ const Hero = () => {
 
   const handleDownloadCV = () => {
     const link = document.createElement('a');
-    link.href = '/Parva-Final_Resume.pdf';
+    link.href = '/ParvaResume.pdf';
     link.download = 'ParvaShah_CV.pdf';
     link.click();
   };
